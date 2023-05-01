@@ -19,4 +19,14 @@ public class InputController {
         }
     }
 
+    public static int inputGameTimes(){
+        try{
+            String input = InputView.inputGameTimes();
+            InputValidation.checkInputGamesTimes(input);
+            return Integer.parseInt(input);
+        }catch(IllegalArgumentException e){
+            System.out.println(e.getMessage());
+            return inputGameTimes();
+        }
+    }
 }
