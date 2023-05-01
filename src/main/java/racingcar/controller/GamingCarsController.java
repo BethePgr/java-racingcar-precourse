@@ -10,10 +10,9 @@ public class GamingCarsController {
     public void run(){
         List<String> carNames = InputController.inputCarNames();
         int times = InputController.inputGameTimes();
-        GamingCars gamingCars = new GamingCars(carNames);
-        GamingCarService gamingCarService = new GamingCarService(gamingCars);
+        GamingCarService gamingCarService = new GamingCarService(carNames);
         playGame(times,gamingCarService);
-
+        OutputView.printCarWinners(gamingCarService.findLargestPositionOfCarNames());
     }
 
     public void playGame(int times,GamingCarService gamingCarService){

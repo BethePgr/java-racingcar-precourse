@@ -29,7 +29,7 @@ class GamingCarsTest {
         List<String> cars = Arrays.asList("one");
         //when
         GamingCars gamingCars = new GamingCars(cars);
-        GamingCarService gamingCarService = new GamingCarService(gamingCars);
+        GamingCarService gamingCarService = new GamingCarService(cars);
         //then
         gamingCarService.playOneTime();
         gamingCarService.playOneTime();
