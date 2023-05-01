@@ -19,11 +19,13 @@ public class GamingCarService {
         }
     }
 
-
     private boolean isRandomNumberOver4(){
         int number = Randoms.pickNumberInRange(0,9);
         return number>=4;
     }
 
+    public GamingCars getGamingCars(){
+        return gamingCars;
+    }
 
 }
