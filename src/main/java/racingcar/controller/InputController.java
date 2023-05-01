@@ -8,7 +8,7 @@ import racingcar.view.InputView;
 
 public class InputController {
 
-    public List<String> inputCarNames(){
+    public static List<String> inputCarNames(){
         try{
             String input = InputView.inputCarNames();
             InputValidation.checkInputCarNames(input);
