@@ -22,4 +22,7 @@ public class OutputView {
         return str.toString();
     }
 
+    public static void printCarWinners(String winnerCars){
+        System.out.println("최종 우승자 : " + winnerCars);
+    }
 }
