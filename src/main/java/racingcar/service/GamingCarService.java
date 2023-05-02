@@ -27,17 +27,18 @@ public class GamingCarService {
             .max(Comparator.comparingInt(Car::getPosition))
             .orElseThrow(() -> new IllegalArgumentException("[ERROR] 1등인 차가 없습니다.")).getPosition();
 
-        return gamingCars.getAllCars().stream().filter(car -> car.getPosition() == position).collect(
-            Collectors.toList());
+        return gamingCars.getAllCars().stream().filter(car -> car.getPosition() == position)
+            .collect(
+                Collectors.toList());
     }
 
-    public String findLargestPositionOfCarNames(){
+    public String findLargestPositionOfCarNames() {
         List<Car> carList = findLargestPositionOfCarList();
         StringBuilder stringBuilder = new StringBuilder();
-        for(Car car : carList){
+        for (Car car : carList) {
             stringBuilder.append(car.getName()).append(",");
         }
-        return stringBuilder.deleteCharAt(stringBuilder.length()-1).toString();
+        return stringBuilder.deleteCharAt(stringBuilder.length() - 1).toString();
     }
 
 

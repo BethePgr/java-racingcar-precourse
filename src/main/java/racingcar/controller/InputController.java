@@ -8,23 +8,23 @@ import racingcar.view.InputView;
 
 public class InputController {
 
-    public static List<String> inputCarNames(){
-        try{
+    public static List<String> inputCarNames() {
+        try {
             String input = InputView.inputCarNames();
             InputValidation.checkInputCarNames(input);
             return Arrays.stream(input.split(",")).collect(Collectors.toList());
-        }catch(IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
             return inputCarNames();
         }
     }
 
-    public static int inputGameTimes(){
-        try{
+    public static int inputGameTimes() {
+        try {
             String input = InputView.inputGameTimes();
             InputValidation.checkInputGamesTimes(input);
             return Integer.parseInt(input);
-        }catch(IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
             return inputGameTimes();
         }

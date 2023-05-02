@@ -13,18 +13,18 @@ class GamingCarsTest {
 
     @Test
     @DisplayName("이름 세 개를 작성했으니 gamingCars의 사이즈도 3개여야 한다.")
-    void testGamingCars() throws Exception{
+    void testGamingCars() throws Exception {
         //given
-        List<String> cars = Arrays.asList("one","two","three");
+        List<String> cars = Arrays.asList("one", "two", "three");
         //when
         GamingCars gamingCars = new GamingCars(cars);
         //then
-        assertEquals(3,gamingCars.getAllCars().size());
+        assertEquals(3, gamingCars.getAllCars().size());
     }
 
     @Test
     @DisplayName("두 번 이동했으니 position의 값은 0과2사이여야 한다.")
-    void testGamingCarsMoving() throws Exception{
+    void testGamingCarsMoving() throws Exception {
         //given
         List<String> cars = Arrays.asList("one");
         //when
